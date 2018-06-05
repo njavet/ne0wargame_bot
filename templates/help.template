@@ -1,0 +1,23 @@
+Hi
+
+You will start at level 0 and after 4 units of trainings you reach the next level! 
+
+All units count equally!
+
+Trainings:
+    - weightlifting
+    - cardio
+    - martial-arts
+    - calisthenics
+
+Emoticons:
+
+{% for key, val in emoticons.items() %}
+    {{ val }} {{ key }} emoticon
+
+{% endfor %}
+Commands:
+    /help - print this help msg
+    /stats - current stats of all users
+    /statsv - display verbose stats
+
