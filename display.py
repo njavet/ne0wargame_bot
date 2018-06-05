@@ -37,11 +37,11 @@ def generate_png(template_file, start, bg, args):
 
 
 # TODO: ugly and dependent of an external command
-def txt2png(in_txt, out_fname, font='DejaVu-Sans-Mono-Book', bg='lightblue'):
+def txt2png(in_txt, out_fname, font='DejaVu-Sans-Mono-Oblique', bg='lightblue'):
     tmp = 'label:' + in_txt
     # cmd = ['convert', '-font', font, '-size', '320x160', tmp, out_fname]
     cmd = ['convert', '-font', font, '-background', bg, tmp, out_fname]
-    subprocess.run(cmd)
+    subprocess.call(cmd)
 
 
 # stats

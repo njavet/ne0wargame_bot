@@ -150,7 +150,8 @@ class BotOps(object):
     def get_ranks(users):
         dix0 = collections.defaultdict(list)
         lst0 = [(key, users[key]['total']) for key in users.keys()]
-        ranks = sorted(lst0, reverse=True, key=operator.itemgetter(1))
+#        ranks = sorted(lst0, reverse=True, key=operator.itemgetter(1))
+        ranks = sorted(lst0, key=operator.itemgetter(1))
         for (user_id, units) in ranks:
             dix0[units].append(user_id)
         dix1 = {}
