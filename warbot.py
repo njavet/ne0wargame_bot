@@ -59,8 +59,8 @@ class WarBot(object):
         bot.send_message(chat_id=update.message.chat_id, text=help_text)
 
     def send_stats(self, bot, update):
-        # chat_id = "-251980753"
-        chat_id = str(update.message.chat_id)
+        chat_id = "-251980753"
+        # chat_id = str(update.message.chat_id)
         users = self.chats[chat_id]
         ranks = self.ops.get_ranks(users)
         user_id = str(update.message.from_user.id)
@@ -69,8 +69,8 @@ class WarBot(object):
         self.send_photo(bot, update, fname)
 
     def send_statsv(self, bot, update):
-        # chat_id = "-251980753"
-        chat_id = str(update.message.chat_id)
+        chat_id = "-251980753"
+        # chat_id = str(update.message.chat_id)
         users = self.chats[chat_id]
         user_id = str(update.message.from_user.id)
         bg = self.ops.get_background_color(user_id, users)

@@ -9,11 +9,7 @@ class Storage(object):
 
     @staticmethod
     def setup_db(host, dbuser, dbpasswd):
-        client = pymongo.MongoClient(host=host,
-                                     username=dbuser,
-                                     password=dbpasswd,
-                                     authSource='wargame',
-                                     authMechanism='SCRAM-SHA-1')
+        client = pymongo.MongoClient(host='localhost')
         return client.wargame
 
     def read_chats(self):
